@@ -45,3 +45,10 @@ table th {
   position: sticky;
   top: 0;
 }
+
+
+#node-version {
+  color: green;
+  font-size: 120%;
+  font-weight: bold;
+}

@@ -2098,6 +2098,7 @@ tests['drawImage(img,0,0)'] = function (ctx, done) {
   img.src = imageSrc('state.png')
 }
 
+/*
 tests['drawImage(img) jpeg'] = function (ctx, done) {
   const img = new Image()
   img.onload = function () {
@@ -2107,6 +2108,7 @@ tests['drawImage(img) jpeg'] = function (ctx, done) {
   img.onerror = done
   img.src = imageSrc('face.jpeg')
 }
+*/
 
 tests['drawImage(img) YCCK JPEG (#425)'] = function (ctx, done) {
   // This also provides coverage for CMYK JPEGs

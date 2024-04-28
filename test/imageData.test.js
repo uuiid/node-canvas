@@ -9,12 +9,17 @@ const assert = require('assert')
 
 describe('ImageData', function () {
   it('Prototype and ctor are well-shaped, don\'t hit asserts on accessors (GH-803)', function () {
-    assert.throws(function () { ImageData.prototype.width }, /incompatible receiver/)
+    assert.throws(function () { ImageData.prototype.width }, /invalid argument/i)
   })
 
   it('stringifies as [object ImageData]', function () {
     const imageData = createImageData(2, 3)
     assert.strictEqual(imageData.toString(), '[object ImageData]')
+  })
+
+  it('gives class string as `ImageData`', function () {
+    const imageData = createImageData(2, 3)
+    assert.strictEqual(Object.prototype.toString.call(imageData), '[object ImageData]')
   })
 
   it('should throw with invalid numeric arguments', function () {
