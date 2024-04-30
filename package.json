@@ -31,7 +31,7 @@
     "test-server": "node test/server.js",
     "generate-wpt": "node ./test/wpt/generate.js",
     "test-wpt": "mocha test/wpt/generated/*.js",
-    "install": "node-gyp build",
+    "install": "node-gyp rebuild",
     "dtslint": "dtslint types"
   },
   "files": [
